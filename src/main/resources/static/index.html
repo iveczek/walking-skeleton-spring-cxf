@@ -17,6 +17,8 @@
 <h2>TODO</h2>
 <p>If done with todo item, just move it Skeleton Feature list</p>
 <ul>
+    <li>Why CXF is creating clients that returns String???</li>
+    <li>Find better way to return rest response instead of building always ok response!</li>
     <li>Add example data mapper between soap <-> rest request/response with unit tests!</li>
     <li>Add Eureka client dependency, annotation, settings in application.properties</li>
     <li>Add profiles to application and find convenient way to spin application with different profiles (default profile?)</li>
@@ -46,7 +48,8 @@
 
 <h2>To discuss</h2>
 <ul>
-    <li>Find a way to configure globally pretty print for soap clients instead of using private method in WeatherServiceConfig</li>
+    <li>Find a way to configure globally pretty print for soap clients instead of using private method in WeatherServiceConfig. Temporary solution: CxfSoapClient custom abstract class - don't like it...</li>
+    <li>Does CXF soap client creation need RequestScope definition</li>
 </ul>
 
 <h2>Helpful links</h2>

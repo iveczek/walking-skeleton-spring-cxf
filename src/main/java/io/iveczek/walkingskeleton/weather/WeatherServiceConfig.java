@@ -1,7 +1,7 @@
 package io.iveczek.walkingskeleton.weather;
 
+import io.iveczek.walkingskeleton.config.CxfSoapClient;
 import net.webservicex.GlobalWeatherSoap;
-import org.apache.cxf.interceptor.AbstractLoggingInterceptor;
 import org.apache.cxf.interceptor.LoggingInInterceptor;
 import org.apache.cxf.interceptor.LoggingOutInterceptor;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class WeatherServiceConfig {
+public class WeatherServiceConfig  extends CxfSoapClient {
 
     @Bean
     public GlobalWeatherSoap globalWeatherSoapClient(){
@@ -20,10 +20,5 @@ public class WeatherServiceConfig {
         factory.setServiceClass(GlobalWeatherSoap.class);
 
         return (GlobalWeatherSoap) factory.create();
-    }
-
-    private AbstractLoggingInterceptor getPrettyLoggingInterceptor(AbstractLoggingInterceptor loggingInterceptor) {
-        loggingInterceptor.setPrettyLogging(true);
-        return loggingInterceptor;
     }
 }
