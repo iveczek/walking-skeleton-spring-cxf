@@ -8,11 +8,8 @@ import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
 @Configuration
 public class WeatherServiceConfig {
-
-
 
     @Bean
     public GlobalWeatherSoap globalWeatherSoapClient(){
