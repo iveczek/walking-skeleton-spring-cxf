@@ -24,7 +24,8 @@
     <li>Add timeout configuration for Weather soap client to application.properties</li>
     <li>Add try/catch block to Weather soap client call</li>
     <li>Add catch exceptions to Weather soap client: SOAPFault, TimeOut, UnknownHost, other</li>
-    <li>Add and setup logback for rolling file appender, split logs into separate files (communication, errors, spring)</li>
+    <li>Add error message response (rest) handler for all errors including exceptions, return http standard code + error message with root cause</li>
+    <li>Add and setup logback for rolling file appender, split logs into separate files (communication, errors, spring, ...)</li>
     <li>Add tracing of requests/response and related logs (threads, headerID, ???)</li>
     <li>Add to integration-test resource to pom</li>
     <li>Add integration test with WireMock</li>
