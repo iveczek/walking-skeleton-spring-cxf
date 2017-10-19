@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 public class WeatherService {
 
     @Autowired
-    private GlobalWeatherSoap weather;
+    private GlobalWeatherSoap weatherClient;
 
     public String getWeather(){
 
-        return this.weather.getWeather("Paris", "France");
+        return this.weatherClient.getWeather("Paris", "France");
 
 
 

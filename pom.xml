@@ -102,6 +102,10 @@
 									<wsdl>${basedir}/src/main/resources/wsdl/globalweather.wsdl</wsdl>
 									<wsdlLocation>classpath:wsdl/globalweather.wsdl</wsdlLocation>
 								</wsdlOption>
+								<wsdlOption>
+									<wsdl>${basedir}/src/main/resources/wsdl/stockquote.wsdl</wsdl>
+									<wsdlLocation>classpath:wsdl/stockquote.wsdl</wsdlLocation>
+								</wsdlOption>
 							</wsdlOptions>
 						</configuration>
 						<goals>

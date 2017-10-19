@@ -1,13 +1,16 @@
 package io.iveczek.walkingskeleton.rest;
 
+import io.iveczek.walkingskeleton.stocks.StockQuoteService;
 import io.iveczek.walkingskeleton.weather.WeatherService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -19,7 +22,10 @@ import javax.ws.rs.core.Response;
 public class DemoResource {
 
     @Autowired
-    WeatherService weatherService;
+    private WeatherService weatherService;
+
+    @Autowired
+    private StockQuoteService stockQuoteService;
 
     @GET
     @Path("/demo")
@@ -32,9 +38,16 @@ public class DemoResource {
 
     @GET
     @Path("/weather")
-    @ApiOperation(value = "Get weather in Sundsvall")
+    @ApiOperation(value = "Get weather in ...")
     public Response getWeather(){
         return Response.ok(weatherService.getWeather()).build();
     }
-}
 
+    @GET
+    @Path("/stock/{ticker}")
+    @ApiOperation(value = "Get stockQuote by ticker.")
+    public Response getStocks(
+            @ApiParam(value = "Ticker of the company", required = true, defaultValue = "MSFT") @PathParam("ticker") String ticker){
+        return Response.ok(stockQuoteService.getStockQuoteByTicker(ticker)).build();
+    }
+}
