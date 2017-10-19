@@ -14,10 +14,34 @@
     <li><a href="/walking-skeleton/swagger.json" >swagger.json</a></li>
 </ul>
 
+<h2>TODO</h2>
+<p>If done with todo item, just move it Skeleton Feature list</p>
+<ul>
+    <li>Add profiles to application and find convenient way to spin application with different profiles (default profile?)</li>
+    <li>Add url configuration for Weather soap client to application.properties</li>
+    <li>Add timeout configuration for Weather soap client to application.properties</li>
+    <li>Add try/catch block to Weather soap client call</li>
+    <li>Add catch exceptions to Weather soap client: SOAPFault, TimeOut, UnknownHost, other</li>
+    <li>Add and setup logback for rolling file appender, split logs into separate files (communication, errors, spring)</li>
+    <li>Add tracing of requests/response and related logs (threads, headerID, ???)</li>
+</ul>
+
+<h2>Skeleton feature</h2>
+<ul>
+    <li>Basic index.html at service root (localhost:port)</li>
+    <li>Logging to console request and response from Rest endpoints</li>
+    <li>Logging to console request and response from CXF soap client</li>
+    <li>Basic SOAP CXF client generation based on Microsoft Weather Service</li>
+    <li>Swagger Rest endpoints definition file</li>
+    <li>Swagger UI</li>
+    <li>Spring Actuator endpoint security disabled</li>
+</ul>
+
 <h2>Helpful links</h2>
 <ul>
     <li><a href="https://www.codenotfound.com/2016/10/spring-ws-soap-web-service-consumer-provider-wsdl-example.html">Spring SOAP with CXF example</a></li>
-
+    <li><a href="http://cxf.apache.org/docs/swagger2feature.html">Swagger UI in CXF</a></li>
+    <li><a href="https://github.com/swagger-api/swagger-core/wiki/annotations">Swagger annotations for JaxRS</a></li>
 </ul>
 
 </body>

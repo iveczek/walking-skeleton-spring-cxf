@@ -23,6 +23,9 @@ public class SwaggerConfiguration {
     @Value("${swagger.basePath}")
     private String basePath;
 
+    @Value("${swagger.prettyPrint}")
+    private boolean prettyPrint;
+
     @ConfigurationProperties(prefix = "swagger")
     @Bean
     public Swagger2Feature swagger2Feature() {
